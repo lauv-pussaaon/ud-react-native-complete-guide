@@ -1,8 +1,12 @@
 import React from "react";
-import { FlatList, View, Text } from "react-native";
+import { FlatList, View, Text, TouchableOpacity } from "react-native";
 import styles from "./styles";
 
-function CategoryOptions({ categories, selectedCategory }) {
+function CategoryOptions({
+    categories,
+    selectedCategory,
+    setSelectedCategory,
+}) {
     return (
         <FlatList
             style={styles.container}
@@ -12,19 +16,23 @@ function CategoryOptions({ categories, selectedCategory }) {
             renderItem={({ item }) => {
                 const isSelected = item === selectedCategory;
                 return (
-                    <View
-                        style={[
-                            styles.optionContainer,
-                            isSelected ? styles.selectedOptionContainer : {},
-                        ]}>
-                        <Text
+                    <TouchableOpacity onPress={() => setSelectedCategory(item)}>
+                        <View
                             style={[
-                                styles.optionText,
-                                isSelected ? styles.selectedOptionText : {},
+                                styles.optionContainer,
+                                isSelected
+                                    ? styles.selectedOptionContainer
+                                    : {},
                             ]}>
-                            {item}
-                        </Text>
-                    </View>
+                            <Text
+                                style={[
+                                    styles.optionText,
+                                    isSelected ? styles.selectedOptionText : {},
+                                ]}>
+                                {item}
+                            </Text>
+                        </View>
+                    </TouchableOpacity>
                 );
             }}></FlatList>
     );
