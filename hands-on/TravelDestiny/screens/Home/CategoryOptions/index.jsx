@@ -6,6 +6,7 @@ function CategoryOptions({ categories, selectedCategory }) {
     return (
         <FlatList
             style={styles.container}
+            showsHorizontalScrollIndicator={false}
             horizontal
             data={categories}
             renderItem={({ item }) => {

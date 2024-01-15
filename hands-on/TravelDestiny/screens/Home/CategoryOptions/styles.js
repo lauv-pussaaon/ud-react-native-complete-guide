@@ -3,6 +3,7 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
     container: {
         marginVertical: 16,
+        marginRight: -32,
     },
     optionContainer: {
         paddingBottom: 2,
