@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import { View, Text } from "react-native";
 import styles from "./styles";
 import CategoryOptions from "../CategoryOptions";
+import AttractionCard from "../AttractionCard";
+import attractions from "../../../data.json";
 
-function MainContent() {
+function Attractions() {
     const categories = ["All", "Popular", "Top Rated", "Featured", "Luxury"];
     const [selectedCategory, setSelectedCategory] = useState("All");
-
     return (
         <>
             <View style={styles.titleContainer}>
@@ -17,8 +18,18 @@ function MainContent() {
                 selectedCategory={selectedCategory}
                 setSelectedCategory={setSelectedCategory}
             />
+            <View style={styles.attractionListContainer}>
+                {attractions.map(attraction => {
+                    return (
+                        <AttractionCard
+                            attraction={attraction}
+                            key={attraction.name}
+                        />
+                    );
+                })}
+            </View>
         </>
     );
 }
 
-export default MainContent;
+export default Attractions;

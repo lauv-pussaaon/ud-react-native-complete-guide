@@ -1,11 +1,8 @@
-import React from 'react';
-import Home from './screens/Home';
-
+import React from "react";
+import Home from "./src/screens/Home";
 
 function App() {
-    return (
-        <Home />
-    );
+    return <Home />;
 }
 
 export default App;

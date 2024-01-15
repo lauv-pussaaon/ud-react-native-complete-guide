@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Basílica de la Sagrada Familia",
+        "detail": "This unfinished masterpiece by Antoni Gaudí is a mesmerizing blend of Gothic and Art Nouveau architecture. Construction began in 1882 and is still ongoing, but visitors can already marvel at its intricate facade, towering spires, and stained glass windows.",
+        "location": "Barcelona, Spain",
+        "imageUrl": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRAFWw-_as-j4SOfZWHMIcQUHisfo31mf38EDwq6zbgXoADpiJ0CxJLrScrdQbD"
+    },
+    {
+        "name": "Colosseum",
+        "detail": "Witness the grandeur of ancient Rome at the Colosseum, the largest amphitheater ever built. Imagine the gladiatorial battles and public spectacles that unfolded within its walls 2,000 years ago.",
+        "location": "Rome, Italy",
+        "imageUrl": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSSkZCiotm1Asq8jnveRS3TUr13P0aocLF2IgSUT7R2BbiftiUTs6-noGwqtmGF"
+    }
+]

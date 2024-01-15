@@ -2,7 +2,8 @@ import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
     screenContainer: {
-        margin: 32,
+        marginHorizontal: 32,
+        marginTop: 32,
     },
 });
 
