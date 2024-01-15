@@ -10,5 +10,47 @@
         "detail": "Witness the grandeur of ancient Rome at the Colosseum, the largest amphitheater ever built. Imagine the gladiatorial battles and public spectacles that unfolded within its walls 2,000 years ago.",
         "location": "Rome, Italy",
         "imageUrl": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSSkZCiotm1Asq8jnveRS3TUr13P0aocLF2IgSUT7R2BbiftiUTs6-noGwqtmGF"
+    },
+    {
+        "name": "Anne Frank House",
+        "detail": "Step back in time and experience the poignant story of Anne Frank, a young Jewish girl who hid from the Nazis in this Amsterdam canal house during World War II. Her diary, written while in hiding, is a powerful testament to the human spirit.",
+        "location": "Amsterdam, The Netherlands",
+        "imageUrl": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQUjEuc3YxPMrcTZ4RD66wwrjZDz11vJcQJS0R-mfTR9iACLCeOJhGy2gBwexBu"
+    },
+    {
+        "name": "The Dubai Fountain",
+        "detail": "Be mesmerized by the world's tallest choreographed fountain system, located at the base of the Burj Khalifa in Dubai. Witness a dazzling spectacle of water, music, and light every evening.",
+        "location": "Dubai, United Arab Emirates",
+        "imageUrl": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcR_Mqu5ihFUdqD4cBWvSrPhLgnEvaC4yyi1O00B0aiwsiTjIQmbFEOv6XW9J1nN"
+    },
+    {
+        "name": "Empire State Building",
+        "detail": "Soar up to the top of this iconic skyscraper and take in breathtaking 360-degree views of the Big Apple. The Empire State Building has been featured in countless movies and remains a symbol of New York City's grandeur.",
+        "location": "New York City, USA",
+        "imageUrl": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSFFYurKi8QE188mN5uxY9laAbLXc4P4k1LUgV8lpcBYn7siTC5bQD6H0Wzv6pg"
+    },
+    {
+        "name": "Angkor Wat",
+        "detail": "Explore the sprawling temple complex of Angkor Wat, the largest religious monument in the world. This ancient Khmer temple is a stunning example of Hindu and Buddhist architecture.",
+        "location": "Siem Reap, Cambodia",
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAXnyBdQL2xYtxKmwwW04SO8vkvCk4G11kp6pTbf0qnu7M_xU2Wyyx6OK0V19c"
+    },
+    {
+        "name": "Machu Picchu",
+        "detail": "Hike up to the \"Lost City of the Incas\" and discover the mysterious ruins of Machu Picchu, perched high in the Andes Mountains. This UNESCO World Heritage Site offers breathtaking scenery and a glimpse into ancient Inca civilization.",
+        "location": "Cusco, Peru",
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbeATXbeh5u_j-XlVlmMjpys2Om6rokH3Dis8q1kUnyJVpJfAwT37uVQAUEJ5x"
+    },
+    {
+        "name": "The Great Wall of China",
+        "detail": "Walk along portions of the Great Wall of China, a symbol of Chinese history and resilience. Hike through stunning landscapes and immerse yourself in the rich history of this ancient wonder.",
+        "location": "Various locations across China",
+        "imageUrl": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRLYQTpq4i32Z2NMYd_cy0z9G1eW9O41slLPSOOhASj0leHFtQke3RcVxSYN_b8"
+    },
+    {
+        "name": "Pyramids of Giza",
+        "detail": "Witness the majesty of the Pyramids of Giza, ancient tombs of the pharaohs Khufu, Khafre, and Menkaure. These awe-inspiring structures are some of the oldest and most recognizable landmarks in the world.",
+        "location": "Cairo, Egypt",
+        "imageUrl": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSrnC2v61UvGDs6S8AUsTiYNgz_40zm0JG6q1MH9dTXW00cE4VyFhHuwuXIRthC"
     }
 ]
