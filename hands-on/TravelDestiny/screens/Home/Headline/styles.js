@@ -3,7 +3,6 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
     headlineContainer: {
         marginVertical: 32,
-        marginHorizontal: 16,
     },
     headline: {
         color: "hsla(202 40% 46% / 1)",
