@@ -12,6 +12,7 @@ function CategoryOptions({
             style={styles.container}
             showsHorizontalScrollIndicator={false}
             horizontal
+            keyExtractor={item => String(item)}
             data={categories}
             renderItem={({ item }) => {
                 const isSelected = item === selectedCategory;

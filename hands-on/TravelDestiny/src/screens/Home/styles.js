@@ -1,9 +1,26 @@
 import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
-    screenContainer: {
+    containerMarginX: {
         marginHorizontal: 32,
-        marginTop: 32,
+    },
+    headlineContainer: {
+        marginVertical: 32,
+    },
+    headline: {
+        color: "hsla(202 40% 46% / 1)",
+        fontSize: 32,
+        fontWeight: "400",
+    },
+    textBold: {
+        fontWeight: "700",
+    },
+    title: {
+        fontSize: 20,
+        fontWeight: "700",
+    },
+    titleContainer: {
+        marginVertical: 16,
     },
 });
 

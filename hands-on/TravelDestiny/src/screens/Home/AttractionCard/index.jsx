@@ -2,9 +2,13 @@ import React from "react";
 import { View, Text, Image } from "react-native";
 import styles from "./styles";
 
-function AttractionCard({ attraction }) {
+function AttractionCard({ attraction, index }) {
     return (
-        <View style={styles.container}>
+        <View
+            style={[
+                styles.container,
+                { marginLeft: index % 2 === 0 ? 32 : 12 },
+            ]}>
             <Image
                 style={styles.image}
                 source={{ uri: attraction.images[0] }}

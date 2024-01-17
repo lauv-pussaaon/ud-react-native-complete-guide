@@ -2,11 +2,12 @@ import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
     container: {
-        width: "47%",
+        width: "40%",
         padding: 4,
         borderWidth: 1,
         borderColor: "hsla(0, 0%, 89% / 1)",
         borderRadius: 16,
+        marginBottom: 12,
     },
     image: {
         width: "100%",

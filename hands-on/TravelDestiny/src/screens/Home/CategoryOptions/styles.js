@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
     container: {
         marginVertical: 16,
-        marginRight: -32,
+        paddingLeft: 32,
     },
     optionContainer: {
         paddingBottom: 2,
@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
     },
     optionText: {
         color: "hsla(0, 0%, 0%, 0.5)",
-        fontSize: 12,
+        fontSize: 14,
     },
     selectedOptionText: {
         color: "#000",
