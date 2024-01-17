@@ -16,12 +16,12 @@ function AttractionCard({ attraction, index }) {
             <Text style={styles.name} numberOfLines={1}>
                 {attraction.name}
             </Text>
-            <View style={styles.locationContainer}>
+            <View style={styles.cityContainer}>
                 <Image
                     style={styles.icon}
                     source={require("../../../assets/icons/location.png")}
                 />
-                <Text style={styles.location}>{attraction.location}</Text>
+                <Text style={styles.city}>{attraction.city}</Text>
             </View>
         </View>
     );

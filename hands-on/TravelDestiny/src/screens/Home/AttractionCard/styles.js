@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
         marginTop: 12,
         marginLeft: 6,
     },
-    locationContainer: {
+    cityContainer: {
         flexDirection: "row",
         alignItems: "center",
         gap: 6,
@@ -28,14 +28,14 @@ const styles = StyleSheet.create({
         marginLeft: 6,
         marginBottom: 12,
     },
-    icon: {
-        width: 10,
-        height: 10,
-    },
-    location: {
+    city: {
         fontSize: 10,
         fontWeight: "300",
         color: "hsla(0 0% 0% / 0.5)",
+    },
+    icon: {
+        width: 10,
+        height: 10,
     },
 });
 

@@ -24,7 +24,7 @@ function Attractions({ headerComponents, selectedCategory }) {
                 renderItem={({ item, index }) => (
                     <AttractionCard attraction={item} index={index} />
                 )}
-                keyExtractor={item => String(item)}
+                keyExtractor={item => String(item.id)}
                 numColumns={2}
                 showsVerticalScrollIndicator={false}
                 ListHeaderComponent={headerComponents}
