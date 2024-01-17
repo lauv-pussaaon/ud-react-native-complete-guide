@@ -5,7 +5,10 @@ import styles from "./styles";
 function AttractionCard({ attraction }) {
     return (
         <View style={styles.container}>
-            <Image style={styles.image} source={{ uri: attraction.imageUrl }} />
+            <Image
+                style={styles.image}
+                source={{ uri: attraction.images[0] }}
+            />
             <Text style={styles.name} numberOfLines={1}>
                 {attraction.name}
             </Text>
