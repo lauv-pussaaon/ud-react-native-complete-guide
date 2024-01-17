@@ -1,10 +1,11 @@
 import React from "react";
-import { View, Text, Image } from "react-native";
+import { View, Text, Image, TouchableOpacity } from "react-native";
 import styles from "./styles";
 
-function AttractionCard({ attraction, index }) {
+function AttractionCard({ attraction, index, onPress }) {
     return (
-        <View
+        <TouchableOpacity
+            onPress={onPress}
             style={[
                 styles.container,
                 { marginLeft: index % 2 === 0 ? 32 : 12 },
@@ -23,7 +24,7 @@ function AttractionCard({ attraction, index }) {
                 />
                 <Text style={styles.city}>{attraction.city}</Text>
             </View>
-        </View>
+        </TouchableOpacity>
     );
 }
 

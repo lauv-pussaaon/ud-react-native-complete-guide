@@ -17,7 +17,13 @@
 # Packages Install
 
 ```bash
-yarn add -D @babel/eslint-parser eslint-plugin-react-native eslint-plugin-react
+npm install @babel/eslint-parser eslint-plugin-react-native eslint-plugin-react
+npm install @react-navigation/native
+npm install react-native-navigation
+npm install react-native-gesture-handler
+npm install @react-navigation/stack
+npm install react-native-screens
+npm install react-native-safe-area-context
 
 ```
 
