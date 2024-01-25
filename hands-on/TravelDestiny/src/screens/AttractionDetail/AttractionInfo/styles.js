@@ -10,6 +10,10 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         justifyContent: "space-between",
         alignItems: "center",
+        gap: 8,
+    },
+    titleView: {
+        flex: 1,
     },
     infoContainer: {
         gap: 24,

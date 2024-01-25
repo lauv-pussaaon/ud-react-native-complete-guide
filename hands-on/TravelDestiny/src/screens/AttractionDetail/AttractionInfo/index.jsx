@@ -6,8 +6,13 @@ function AttractionInfo({ attraction }) {
     return (
         <View style={styles.detailContainer}>
             <View style={styles.titleRow}>
-                <View>
-                    <Text style={styles.title}>{attraction.name}</Text>
+                <View style={styles.titleView}>
+                    <Text
+                        style={styles.title}
+                        numberOfLines={2}
+                        lineBreakMode="head">
+                        {attraction.name}
+                    </Text>
                     <Text style={styles.city}>{attraction.city}</Text>
                 </View>
                 <Text style={styles.title}>$20</Text>
