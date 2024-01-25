@@ -28,7 +28,7 @@ function AttractionDetail({ route }) {
                 <MiniMap
                     coordinate={mapCoordinate}
                     title={attraction.name}
-                    description={attraction.city}
+                    description={`${attraction.city}, ${attraction.country}`}
                 />
             </ScrollView>
         </SafeAreaView>

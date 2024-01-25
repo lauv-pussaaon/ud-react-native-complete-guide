@@ -6,6 +6,7 @@ import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import Gallery from "./src/screens/Gallery";
 import { UIContextProvider } from "./src/context/UIContext";
+import FullMap from "./src/screens/FullMap";
 
 function App() {
     const Stack = createStackNavigator();
@@ -28,6 +29,7 @@ function App() {
                         name="AttractionDetail"
                         component={AttractionDetail}></Stack.Screen>
                     <Stack.Screen name="Gallery" component={Gallery} />
+                    <Stack.Screen name="FullMap" component={FullMap} />
                 </Stack.Navigator>
             </NavigationContainer>
         </UIContextProvider>

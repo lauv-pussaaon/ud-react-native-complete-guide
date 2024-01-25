@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
         height: 300,
     },
     fullMapLink: {
-        marginTop: 16,
+        marginVertical: 16,
         marginLeft: "auto",
         marginRight: "auto",
     },

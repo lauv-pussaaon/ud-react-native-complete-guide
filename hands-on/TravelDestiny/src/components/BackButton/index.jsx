@@ -3,7 +3,7 @@ import { TouchableOpacity, Image } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import styles from "./styles";
 
-function BackButton() {
+function BackButton({ customPosition, customIconStyle }) {
     const navigation = useNavigation();
 
     function onBack() {
@@ -14,9 +14,9 @@ function BackButton() {
         <TouchableOpacity
             onPress={onBack}
             hitSlop={8}
-            style={styles.backButtonContainer}>
+            style={[styles.backButtonContainer, customPosition]}>
             <Image
-                style={styles.backButton}
+                style={[styles.backButton, customIconStyle]}
                 source={require("../../assets/icons/back-button.png")}
             />
         </TouchableOpacity>
