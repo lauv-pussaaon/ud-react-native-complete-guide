@@ -4,6 +4,7 @@ import styles from "./styles";
 import BackButton from "../../components/BackButton";
 import ShareButton from "../../components/ShareButton";
 import AttractionGallery from "./AttractionGallery";
+import AttractionInfo from "./AttractionInfo";
 
 function AttractionDetail({ route }) {
     const { item: attraction } = route?.params || {};
@@ -13,6 +14,7 @@ function AttractionDetail({ route }) {
             <BackButton />
             <ShareButton />
             <AttractionGallery images={attraction.images} />
+            <AttractionInfo attraction={attraction} />
         </SafeAreaView>
     );
 }

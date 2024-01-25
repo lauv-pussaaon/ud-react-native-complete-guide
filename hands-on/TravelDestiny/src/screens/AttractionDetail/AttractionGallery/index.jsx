@@ -49,7 +49,7 @@ function AttractionGallery({ images }) {
                                                       style={
                                                           styles.moreImageCount
                                                       }>
-                                                      {moreImageCount}
+                                                      +{moreImageCount}
                                                   </Text>
                                               </View>
                                           )}
