@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
     },
     headline: {
         color: "hsla(202 40% 46% / 1)",
-        fontSize: 32,
+        fontSize: 40,
         fontWeight: "400",
     },
     textBold: {

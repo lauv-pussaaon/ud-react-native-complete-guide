@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
         borderRadius: 16,
     },
     name: {
-        fontSize: 12,
+        fontSize: 14,
         fontWeight: "600",
         marginTop: 12,
         marginLeft: 6,
@@ -29,9 +29,9 @@ const styles = StyleSheet.create({
         marginBottom: 12,
     },
     city: {
-        fontSize: 10,
+        fontSize: 12,
         fontWeight: "300",
-        color: "hsla(0 0% 0% / 0.5)",
+        color: "hsla(0 0% 0% / 0.8)",
     },
     icon: {
         width: 10,
