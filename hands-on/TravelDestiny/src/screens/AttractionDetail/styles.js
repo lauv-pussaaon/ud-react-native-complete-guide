@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
         width: "100%",
         height: height / 2,
         flexDirection: "column",
-        justifyContent: "space-between",
+        justifyContent: "flex-end",
         alignItems: "center",
     },
     image: {
@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
     },
     navBar: {
         flexDirection: "row",
-        justifyContent: "space-between",
+        justifyContent: "flex-end",
         alignItems: "center",
         width: "100%",
     },

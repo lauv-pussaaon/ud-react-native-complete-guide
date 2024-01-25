@@ -2,13 +2,14 @@ import { useNavigation } from "@react-navigation/native";
 import React from "react";
 import {
     View,
-    Pressable,
     SafeAreaView,
     ImageBackground,
     Image,
     TouchableOpacity,
 } from "react-native";
 import styles from "./styles";
+import BackButton from "../../components/BackButton";
+import ShareButton from "../../components/ShareButton";
 
 function AttractionDetail({ route }) {
     const { item: attraction } = route?.params || {};
@@ -16,31 +17,15 @@ function AttractionDetail({ route }) {
     const mainImage = attraction?.images?.at(0);
     const navigation = useNavigation();
 
-    const onBack = () => {
-        navigation.goBack();
-    };
-
     return (
         <SafeAreaView style={styles.container}>
+            <BackButton />
+            <ShareButton />
             <ImageBackground
                 style={styles.viewImage}
                 source={{ uri: mainImage }}
                 resizeMode="cover"
                 imageStyle={styles.image}>
-                <View style={styles.navBar}>
-                    <Pressable onPress={onBack} hitSlop={8}>
-                        <Image
-                            style={styles.icon}
-                            source={require("../../assets/icons/back-button.png")}
-                        />
-                    </Pressable>
-                    <Pressable hitSlop={8}>
-                        <Image
-                            style={styles.icon}
-                            source={require("../../assets/icons/share-button.png")}
-                        />
-                    </Pressable>
-                </View>
                 <TouchableOpacity
                     onPress={() =>
                         navigation.navigate("Gallery", {
