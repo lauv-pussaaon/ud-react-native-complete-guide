@@ -6,6 +6,7 @@ import {
     SafeAreaView,
     ImageBackground,
     Image,
+    TouchableOpacity,
 } from "react-native";
 import styles from "./styles";
 
@@ -40,19 +41,26 @@ function AttractionDetail({ route }) {
                         />
                     </Pressable>
                 </View>
-                <View style={styles.thumbnailsContainer}>
-                    {attraction?.images?.length
-                        ? attraction?.images
-                              .slice(0, 5)
-                              .map(image => (
-                                  <Image
-                                      key={image}
-                                      source={{ uri: image }}
-                                      style={styles.thumbnail}
-                                  />
-                              ))
-                        : null}
-                </View>
+                <TouchableOpacity
+                    onPress={() =>
+                        navigation.navigate("Gallery", {
+                            images: attraction.images,
+                        })
+                    }>
+                    <View style={styles.thumbnailsContainer}>
+                        {attraction.images?.length
+                            ? attraction.images
+                                  .slice(0, 5)
+                                  .map(image => (
+                                      <Image
+                                          key={image}
+                                          source={{ uri: image }}
+                                          style={styles.thumbnail}
+                                      />
+                                  ))
+                            : null}
+                    </View>
+                </TouchableOpacity>
             </ImageBackground>
         </SafeAreaView>
     );

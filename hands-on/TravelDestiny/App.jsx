@@ -4,6 +4,7 @@ import Home from "./src/screens/Home";
 import AttractionDetail from "./src/screens/AttractionDetail";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
+import Gallery from "./src/screens/Gallery";
 
 function App() {
     const Stack = createStackNavigator();
@@ -17,6 +18,7 @@ function App() {
                 <Stack.Screen
                     name="AttractionDetail"
                     component={AttractionDetail}></Stack.Screen>
+                <Stack.Screen name="Gallery" component={Gallery} />
             </Stack.Navigator>
         </NavigationContainer>
     );

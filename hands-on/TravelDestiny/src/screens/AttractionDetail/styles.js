@@ -5,7 +5,7 @@ const { height } = Dimensions.get("window");
 const styles = StyleSheet.create({
     container: {
         marginHorizontal: 22,
-        marginTop: 48,
+        marginTop: 32,
     },
     viewImage: {
         width: "100%",
