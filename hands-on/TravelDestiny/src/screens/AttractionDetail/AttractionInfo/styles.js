@@ -11,7 +11,9 @@ const styles = StyleSheet.create({
         justifyContent: "space-between",
         alignItems: "center",
     },
-    infoContainer: {},
+    infoContainer: {
+        gap: 24,
+    },
     title: {
         fontSize: 32,
         fontWeight: "700",
@@ -25,13 +27,15 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         paddingRight: 48,
         alignItems: "center",
+        gap: 8,
     },
     infoIcon: {
         width: 42,
         height: 42,
     },
     infoText: {
-        fontSize: 13,
+        fontSize: 14,
+        fontWeight: "500",
     },
 });
 

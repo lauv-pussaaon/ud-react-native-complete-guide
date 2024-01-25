@@ -18,9 +18,7 @@ function AttractionInfo({ attraction }) {
                         source={require("../../../assets/icons/location-circle.png")}
                         style={styles.infoIcon}
                     />
-                    <Text style={styles.infoText}>
-                        Address: {attraction.address}
-                    </Text>
+                    <Text style={styles.infoText}>{attraction.address}</Text>
                 </View>
                 <View style={styles.infoRow}>
                     <Image
