@@ -4,10 +4,11 @@ const styles = StyleSheet.create({
     container: {
         marginVertical: 16,
         paddingLeft: 32,
+        paddingRight: 64,
     },
     optionContainer: {
         paddingBottom: 2,
-        marginRight: 16,
+        marginRight: 24,
     },
     selectedOptionContainer: {
         borderBottomWidth: 1,
@@ -15,7 +16,7 @@ const styles = StyleSheet.create({
     },
     optionText: {
         color: "hsla(0, 0%, 0%, 0.5)",
-        fontSize: 14,
+        fontSize: 16,
     },
     selectedOptionText: {
         color: "#000",

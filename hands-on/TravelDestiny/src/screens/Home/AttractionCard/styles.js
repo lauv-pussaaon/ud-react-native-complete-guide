@@ -30,13 +30,13 @@ const styles = StyleSheet.create({
         paddingRight: 16,
     },
     city: {
-        fontSize: 12,
+        fontSize: 14,
         fontWeight: "300",
         color: "hsla(0 0% 0% / 0.8)",
     },
     icon: {
-        width: 10,
-        height: 10,
+        width: 12,
+        height: 12,
     },
 });
 

@@ -23,6 +23,7 @@ function Attractions({ headerComponents, selectedCategory }) {
         <>
             <FlatList
                 data={attractions}
+                style={{ height: "100%" }}
                 renderItem={({ item, index }) => (
                     <AttractionCard
                         attraction={item}
