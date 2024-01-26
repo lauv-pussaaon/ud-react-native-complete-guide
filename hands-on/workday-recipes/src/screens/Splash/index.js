@@ -1,3 +1,4 @@
+import { useNavigation } from "@react-navigation/native";
 import React from "react";
 import {
     ImageBackground,
@@ -9,6 +10,8 @@ import {
 } from "react-native";
 
 function Splash() {
+    const navigation = useNavigation();
+
     return (
         <ImageBackground
             style={styles.screenContainer}
@@ -27,7 +30,10 @@ function Splash() {
                 <Text style={styles.brandTagline}>
                     Simple way to find Tasty Recipe
                 </Text>
-                <TouchableOpacity style={styles.buttonContainer}>
+                <TouchableOpacity
+                    style={styles.buttonContainer}
+                    onPress={() => navigation.navigate("Home")}
+                >
                     <Text style={styles.buttonText}>Start Cooking</Text>
                     <Image
                         style={styles.buttonIcon}
