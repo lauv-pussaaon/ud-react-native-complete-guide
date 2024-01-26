@@ -27,6 +27,7 @@ const styles = StyleSheet.create({
         marginTop: 4,
         marginLeft: 6,
         marginBottom: 12,
+        paddingRight: 16,
     },
     city: {
         fontSize: 12,

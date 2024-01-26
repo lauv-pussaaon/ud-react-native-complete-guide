@@ -1,4 +1,7 @@
-import { StyleSheet } from "react-native";
+import { Dimensions, StyleSheet } from "react-native";
+
+const { width } = Dimensions.get("window");
+const marginBox = 26;
 
 const styles = StyleSheet.create({
     mapContainer: {
@@ -9,13 +12,26 @@ const styles = StyleSheet.create({
         height: "100%",
     },
     locationInfoBox: {
-        height: 100,
+        minHeight: 86,
+        width: width - marginBox * 2,
+        backgroundColor: "rgba(255, 255, 255, 1)",
+        borderRadius: 15,
         position: "absolute",
-        top: 50,
+        top: 72,
         zIndex: 1,
-        width: "100%",
+        margin: marginBox,
+        paddingLeft: 72,
+        paddingRight: 16,
         justifyContent: "center",
-        alignItems: "center",
+        alignItems: "flex-start",
+        gap: 8,
+    },
+    title: {
+        fontSize: 24,
+        fontWeight: "600",
+    },
+    description: {
+        fontSize: 18,
     },
 });
 

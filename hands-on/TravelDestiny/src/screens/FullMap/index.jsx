@@ -12,11 +12,15 @@ function FullMap({ route }) {
     return (
         <View style={styles.mapContainer}>
             <View style={styles.locationInfoBox}>
-                <Text>{title}</Text>
-                <Text>{description}</Text>
+                <Text numberOfLines={1} style={styles.title}>
+                    {title}
+                </Text>
+                <Text numberOfLines={2} style={styles.description}>
+                    {description}
+                </Text>
             </View>
             <BackButton
-                customPosition={{ top: hasNotch ? 72 : 32, left: 32 }}
+                customPosition={{ top: hasNotch ? 115 : 75, left: 32 }}
                 customIconStyle={{ width: 50, height: 50 }}
             />
             <Map initialRegion={coordinate} style={styles.map}>
