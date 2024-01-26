@@ -22,7 +22,10 @@ function AttractionDetail({ route }) {
             style={[styles.container, hasNotch ? { marginTop: 52 } : {}]}>
             <ScrollView showsVerticalScrollIndicator={false}>
                 <BackButton />
-                <ShareButton />
+                <ShareButton
+                    message={`My next travel destiny, ${attraction.name}`}
+                    image_url={attraction.images?.at(0)}
+                />
                 <AttractionGallery images={attraction.images} />
                 <AttractionInfo attraction={attraction} />
                 <MiniMap
