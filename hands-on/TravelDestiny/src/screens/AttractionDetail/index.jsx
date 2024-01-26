@@ -17,6 +17,7 @@ function AttractionDetail({ route }) {
         latitudeDelta: 0.009,
         longitudeDelta: 0.009,
     };
+    // TODO: consider building imageBase64 here before enabling share button
     return (
         <SafeAreaView
             style={[styles.container, hasNotch ? { marginTop: 52 } : {}]}>
@@ -24,7 +25,8 @@ function AttractionDetail({ route }) {
                 <BackButton />
                 <ShareButton
                     message={`My next travel destiny, ${attraction.name}`}
-                    image_url={attraction.images?.at(0)}
+                    imageUrl={attraction.images?.at(0)}
+                    title={attraction.name}
                 />
                 <AttractionGallery images={attraction.images} />
                 <AttractionInfo attraction={attraction} />
