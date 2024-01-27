@@ -1,21 +1,45 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { createStackNavigator } from "@react-navigation/stack";
 import Splash from "./src/screens/Splash";
 import Home from "./src/screens/Home";
+import RecipeDetail from "./src/screens/RecipeDetail";
+import BackButton from "./src/components/BackButton";
+import AppTheme from "./src/constants/AppTheme.js";
 
 export default function App() {
-    const Stack = createNativeStackNavigator();
+    const Stack = createStackNavigator();
 
     return (
-        <NavigationContainer>
-            <Stack.Navigator initialRouteName="Splash">
+        <NavigationContainer theme={AppTheme}>
+            <Stack.Navigator
+                initialRouteName="Splash"
+                screenOptions={{
+                    headerShadowVisible: false,
+                    headerTransparent: true,
+                }}
+            >
                 <Stack.Screen
                     name="Splash"
                     component={Splash}
                     options={{ headerShown: false }}
                 />
-                <Stack.Screen name="Home" component={Home} />
+                <Stack.Screen
+                    name="Home"
+                    component={Home}
+                    options={{
+                        headerLeft: null,
+                        gestureEnabled: false,
+                    }}
+                />
+                <Stack.Screen
+                    name="RecipeDetail"
+                    component={RecipeDetail}
+                    options={{
+                        headerLeft: () => <BackButton />,
+                        gestureEnabled: false,
+                    }}
+                />
             </Stack.Navigator>
         </NavigationContainer>
     );
