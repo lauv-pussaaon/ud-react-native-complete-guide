@@ -16,7 +16,9 @@ export default function App() {
                 initialRouteName="Splash"
                 screenOptions={{
                     headerShadowVisible: false,
-                    headerTransparent: true,
+                    headerStyle: {
+                        backgroundColor: "#fff",
+                    },
                 }}
             >
                 <Stack.Screen
