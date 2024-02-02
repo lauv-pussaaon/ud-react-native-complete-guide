@@ -3,7 +3,7 @@ import { View, Text, Image } from "react-native";
 
 import styles from "./styles";
 
-function Home() {
+function FeaturedCard({}) {
     return (
         <View style={styles.card}>
             <View style={styles.topRow}>
@@ -12,8 +12,9 @@ function Home() {
                         Steak with tomato with hot salsa sause.
                     </Text>
                     <View style={styles.ratingView}>
-                        {Array.from({ length: 5 }).map(() => (
+                        {Array.from({ length: 5 }, (_, index) => (
                             <Image
+                                key={index}
                                 style={styles.starIcon}
                                 source={require("../../../assets/icons/star.png")}
                             />
@@ -45,4 +46,4 @@ function Home() {
     );
 }
 
-export default Home;
+export default FeaturedCard;
