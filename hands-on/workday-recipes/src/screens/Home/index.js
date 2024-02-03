@@ -11,9 +11,14 @@ import TagsSection from "./TagsSection";
 import RecipesSection from "./RecipesSection";
 
 function Home() {
-    const { isLoading, recipes, selectedTag, handleSelectTag } = useRecipes();
+    const {
+        isLoading,
+        recipes,
+        selectedTag,
+        handleSelectTag: setRecipeTag,
+    } = useRecipes("healthy");
 
-    const { isLoading: isLoadingHealthy, recipes: recipesHealthy } =
+    const { isLoading: isLoadingFeatured, recipes: recipesFeatured } =
         useRecipes("breakfast");
 
     const { isLoading: isLoadingTags, tags } = useTags("healthy");
@@ -21,19 +26,23 @@ function Home() {
     return (
         <SafeAreaView style={styles.screenContainer}>
             <View style={styles.searchView}>
-                <Search />
+                <Search
+                    openScreen={"SearchRecipe"}
+                    placeholder={"Search Recipes"}
+                    editable={false}
+                />
             </View>
             <Text style={styles.sectionTitle}>Breakfast Recipes</Text>
-            <FeaturedSection recipes={recipesHealthy} />
+            <FeaturedSection recipes={recipesFeatured} />
             <Text style={styles.sectionTitle}>Healthy Recipes</Text>
             <TagsSection
                 tags={tags}
                 selectedTag={selectedTag}
-                handleSelectTag={handleSelectTag}
+                handleSelectTag={setRecipeTag}
             />
             <RecipesSection recipes={recipes} />
             <FullScreenLoading
-                isVisible={isLoading || isLoadingHealthy || isLoadingTags}
+                isVisible={isLoading || isLoadingFeatured || isLoadingTags}
             />
         </SafeAreaView>
     );

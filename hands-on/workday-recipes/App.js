@@ -4,6 +4,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import Splash from "./src/screens/Splash";
 import Home from "./src/screens/Home";
 import RecipeDetail from "./src/screens/RecipeDetail";
+import SearchRecipe from "./src/screens/SearchRecipe";
 import BackButton from "./src/components/BackButton";
 import AppTheme from "./src/constants/AppTheme.js";
 
@@ -32,6 +33,15 @@ export default function App() {
                     options={{
                         headerLeft: null,
                         gestureEnabled: false,
+                    }}
+                />
+                <Stack.Screen
+                    name="SearchRecipe"
+                    component={SearchRecipe}
+                    options={{
+                        headerLeft: () => <BackButton />,
+                        gestureEnabled: false,
+                        title: "Search Recipes",
                     }}
                 />
                 <Stack.Screen

@@ -16,9 +16,6 @@ const styles = StyleSheet.create({
         width: 18,
         height: 18,
     },
-    placeholderColor: {
-        color: "hsla(0, 0%, 85%, 1)",
-    },
 });
 
 export default styles;
