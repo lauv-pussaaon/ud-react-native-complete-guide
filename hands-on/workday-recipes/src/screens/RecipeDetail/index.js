@@ -12,7 +12,7 @@ import FullScreenLoading from "../../components/FullScreenLoading";
 import { useRecipeInfo } from "../../hooks/useRecipeInfo";
 import { getStyles } from "./styles";
 
-function RecipeDetail({ route, options }) {
+function RecipeDetail({ route }) {
     const { id } = route.params;
     const navigation = useNavigation();
     const theme = useTheme();
@@ -21,7 +21,6 @@ function RecipeDetail({ route, options }) {
     if (isLoading || !recipe) return <FullScreenLoading />;
 
     const styles = StyleSheet.create(getStyles(theme));
-    navigation.setOptions({ title: recipe.name });
     const nutrition = recipe.nutrition;
     delete nutrition.updated_at;
     const nutritionKeys = Object.keys(recipe.nutrition);
@@ -36,10 +35,12 @@ function RecipeDetail({ route, options }) {
                     style={styles.image}
                     source={{ uri: recipe.thumbnail_url }}
                 />
+
+                <Text style={styles.name}>{recipe.name}</Text>
+
                 <View style={styles.nutritionList}>
-                    <Text style={styles.sectionTitle}>Nutritions</Text>
-                    {nutritionKeys.map((key) => (
-                        <View style={styles.nutritionItem}>
+                    {nutritionKeys.map((key, index) => (
+                        <View style={styles.nutritionItem} key={index}>
                             <Text style={styles.nutritionLabel}>{key}</Text>
                             <Text style={styles.nutritionValue}>
                                 {nutrition[key]}
@@ -50,7 +51,7 @@ function RecipeDetail({ route, options }) {
                 <View style={styles.instructionsList}>
                     <Text style={styles.sectionTitle}>Instructions</Text>
                     {recipe.instructions.map((item, index) => (
-                        <View style={styles.instructionItem}>
+                        <View style={styles.instructionItem} key={index}>
                             <Text style={styles.instructionPosition}>
                                 {item.position}
                             </Text>

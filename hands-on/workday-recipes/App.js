@@ -50,6 +50,7 @@ export default function App() {
                     options={{
                         headerLeft: () => <BackButton />,
                         gestureEnabled: false,
+                        title: "",
                     }}
                 />
             </Stack.Navigator>
