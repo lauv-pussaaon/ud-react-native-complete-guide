@@ -16,6 +16,7 @@ function RecipesSection({ recipes }) {
                     return (
                         <RecipeCard
                             key={item.id}
+                            recipeId={item.id}
                             recipeName={item.name}
                             recipeImageUrl={item.thumbnail_url}
                             prepMinutes={item.prep_time_minutes}

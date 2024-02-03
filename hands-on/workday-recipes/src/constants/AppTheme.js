@@ -11,6 +11,7 @@ const AppTheme = {
         grey400: "hsla(0, 0%, 85%, 1)",
         grey300: "hsla(0, 0%, 66%, 1)",
         dark700: "hsla(0, 0%, 28%, 1)",
+        dark800: "hsla(0, 0%, 7%, 1)",
     },
 };
 

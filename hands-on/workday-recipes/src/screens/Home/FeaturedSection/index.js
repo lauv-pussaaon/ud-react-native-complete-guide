@@ -15,6 +15,7 @@ function FeaturedSection({ recipes }) {
                         return (
                             <FeaturedCard
                                 key={item.id}
+                                recipeId={item.id}
                                 recipeName={item.name}
                                 recipeImageUrl={item.thumbnail_url}
                                 rating={item.user_ratings?.score}
