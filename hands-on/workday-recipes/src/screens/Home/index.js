@@ -35,7 +35,7 @@ function Home() {
                     showsHorizontalScrollIndicator={false}
                     renderItem={({ item, index }) => (
                         <FeaturedCard
-                            key={index}
+                            key={item.id}
                             recipeName={item.name}
                             recipeImageUrl={item.thumbnail_url}
                             rating={item.user_ratings?.score}
@@ -61,7 +61,13 @@ function Home() {
                     horizontal
                     showsHorizontalScrollIndicator={false}
                     renderItem={({ item, index }) => (
-                        <RecipeCard key={index} {...customLeftMargin(index)} />
+                        <RecipeCard
+                            key={item.id}
+                            recipeName={item.name}
+                            recipeImageUrl={item.thumbnail_url}
+                            prepMinutes={item.prep_time_minutes}
+                            {...customLeftMargin(index)}
+                        />
                     )}
                 />
             </View>

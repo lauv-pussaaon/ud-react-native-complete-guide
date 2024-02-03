@@ -28,7 +28,10 @@ function CategoryOptions({
                 const isSelected = item === selectedCategory;
                 const lastItem = index === categories.length - 1;
                 return (
-                    <TouchableOpacity onPress={() => setSelectedCategory(item)}>
+                    <TouchableOpacity
+                        onPress={() => setSelectedCategory(item)}
+                        key={index}
+                    >
                         <View
                             style={[
                                 styles.optionContainer,

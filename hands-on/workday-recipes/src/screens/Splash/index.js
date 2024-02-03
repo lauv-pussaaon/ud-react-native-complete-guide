@@ -21,12 +21,11 @@ function Splash() {
             <View style={styles.logoView}>
                 <Image
                     style={styles.logoImage}
-                    source={require("../../../assets/logo.png")}
+                    source={require("../../../assets/workday-recipes-logo.png")}
                 />
-                <Text style={styles.logoText}>100K+ Premium Recipe</Text>
             </View>
             <View style={styles.brandView}>
-                <Text style={styles.brandName}>Get Cooking</Text>
+                <Text style={styles.brandName}>Workday Recipes</Text>
                 <Text style={styles.brandTagline}>
                     Simple way to find Tasty Recipe
                 </Text>
@@ -63,8 +62,8 @@ const styles = StyleSheet.create({
         gap: 14,
     },
     logoImage: {
-        width: 79,
-        height: 79,
+        width: 300,
+        height: 300,
     },
     logoText: {
         fontSize: 18,

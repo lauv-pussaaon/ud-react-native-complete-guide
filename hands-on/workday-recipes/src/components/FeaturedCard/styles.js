@@ -10,6 +10,7 @@ export const getStyles = (theme) => ({
         marginRight: 16,
         marginVertical: 36,
         padding: 10,
+        gap: 8,
         backgroundColor: theme.custom.white,
 
         shadowColor: "#000",

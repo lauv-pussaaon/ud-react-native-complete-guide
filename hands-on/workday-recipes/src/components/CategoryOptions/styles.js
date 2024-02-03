@@ -9,7 +9,6 @@ const getStyles = (theme) => ({
         paddingHorizontal: 20,
         paddingVertical: 8,
         justifyContent: "center",
-        borderRadius: 10,
     },
     optionText: {
         color: theme.custom.green400,
@@ -19,6 +18,7 @@ const getStyles = (theme) => ({
 
     selectedOptionContainer: {
         backgroundColor: theme.custom.green600,
+        borderRadius: 10,
     },
     selectedOptionText: {
         color: theme.custom.white,

@@ -40,7 +40,11 @@ function FeaturedCard({
                 </View>
                 <Image
                     style={styles.recipeImage}
-                    source={{ uri: recipeImageUrl }}
+                    source={
+                        recipeImageUrl
+                            ? { uri: recipeImageUrl }
+                            : require("../../../assets/workday-recipes-logo.png")
+                    }
                 />
             </View>
             <View style={styles.bottomRow}>
