@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
     sectionTitle: {
         fontSize: 16,
         fontWeight: "600",
-        marginTop: 36,
+        marginTop: 24,
     },
     featuredList: {
         flexDirection: "row",

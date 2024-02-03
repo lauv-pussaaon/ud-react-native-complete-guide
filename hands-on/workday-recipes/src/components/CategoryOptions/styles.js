@@ -14,6 +14,7 @@ const getStyles = (theme) => ({
         color: theme.custom.green400,
         fontSize: 16,
         fontWeight: "600",
+        textTransform: "capitalize",
     },
 
     selectedOptionContainer: {
