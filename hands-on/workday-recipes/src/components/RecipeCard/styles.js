@@ -16,9 +16,9 @@ export const getStyles = (theme) => ({
     },
     recipeImage: {
         marginTop: "-50%",
-        width: 115,
-        height: 115,
-        borderRadius: 50,
+        width: 120,
+        height: 120,
+        borderRadius: 60,
     },
     recipeName: {
         fontSize: 18,
