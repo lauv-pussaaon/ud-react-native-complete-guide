@@ -7,19 +7,21 @@ const styles = StyleSheet.create({
     searchView: {
         marginTop: 20,
     },
-    featuredSection: {
-        marginTop: 36,
-    },
-    categoryView: {
-        marginTop: 36,
+    listView: {
+        marginHorizontal: -24,
     },
     sectionTitle: {
         fontSize: 16,
         fontWeight: "600",
+        marginTop: 36,
     },
     featuredList: {
         flexDirection: "row",
         gap: 16,
+    },
+    recipeList: {
+        flexDirection: "row",
+        gap: 12,
     },
 });
 

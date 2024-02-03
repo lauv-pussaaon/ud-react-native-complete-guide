@@ -1,11 +1,15 @@
 import React from "react";
 import { View, Text, Image } from "react-native";
+import { useTheme } from "@react-navigation/native";
 
-import styles from "./styles";
+import { getStyles } from "./styles";
 
-function FeaturedCard({}) {
+function FeaturedCard({ customStyle }) {
+    const theme = useTheme();
+    const styles = getStyles(theme);
+
     return (
-        <View style={styles.card}>
+        <View style={[styles.card, customStyle]}>
             <View style={styles.topRow}>
                 <View style={styles.recipeNameView}>
                     <Text numberOfLines={1} style={styles.recipeName}>

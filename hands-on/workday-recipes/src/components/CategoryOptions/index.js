@@ -24,8 +24,9 @@ function CategoryOptions({
             horizontal
             keyExtractor={(item) => String(item)}
             data={categories}
-            renderItem={({ item }) => {
+            renderItem={({ item, index }) => {
                 const isSelected = item === selectedCategory;
+                const lastItem = index === categories.length - 1;
                 return (
                     <TouchableOpacity onPress={() => setSelectedCategory(item)}>
                         <View
@@ -34,6 +35,7 @@ function CategoryOptions({
                                 isSelected
                                     ? styles.selectedOptionContainer
                                     : {},
+                                lastItem ? { marginRight: 24 } : {},
                             ]}
                         >
                             <Text

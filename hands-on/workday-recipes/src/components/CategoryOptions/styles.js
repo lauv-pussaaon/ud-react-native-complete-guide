@@ -3,9 +3,7 @@ import { StyleSheet } from "react-native";
 const getStyles = (theme) => ({
     container: {
         marginVertical: 16,
-        marginHorizontal: -24,
         paddingLeft: 24,
-        paddingRight: 64,
     },
     optionContainer: {
         paddingHorizontal: 20,
@@ -20,7 +18,6 @@ const getStyles = (theme) => ({
     },
 
     selectedOptionContainer: {
-        borderBottomWidth: 1,
         backgroundColor: theme.custom.green600,
     },
     selectedOptionText: {

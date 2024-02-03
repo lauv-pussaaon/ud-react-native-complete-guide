@@ -1,15 +1,16 @@
-import { StyleSheet } from "react-native";
+import { Dimensions, StyleSheet } from "react-native";
 
-const styles = StyleSheet.create({
+const { width } = Dimensions.get("window");
+
+export const getStyles = (theme) => ({
     card: {
-        width: "75%",
-        minWidth: 251,
+        width: width * 0.6,
         minHeight: 92,
         borderRadius: 10,
-        marginTop: 32,
+        marginRight: 16,
+        marginVertical: 36,
         padding: 10,
-        gap: 4,
-        backgroundColor: "white",
+        backgroundColor: theme.custom.white,
 
         shadowColor: "#000",
         shadowOffset: {
@@ -72,8 +73,6 @@ const styles = StyleSheet.create({
     },
     greyText: {
         fontSize: 14,
-        color: "hsla(0, 0%, 66%, 1)",
+        color: theme.custom.grey300,
     },
 });
-
-export default styles;
