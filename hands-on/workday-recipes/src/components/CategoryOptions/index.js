@@ -47,7 +47,7 @@ function CategoryOptions({
                                     isSelected ? styles.selectedOptionText : {},
                                 ]}
                             >
-                                {item}
+                                {item.replace("_", " ")}
                             </Text>
                         </View>
                     </TouchableOpacity>

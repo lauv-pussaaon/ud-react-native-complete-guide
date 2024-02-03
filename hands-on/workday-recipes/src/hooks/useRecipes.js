@@ -8,17 +8,24 @@ export function useRecipes(tag) {
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
     const [recipes, setRecipes] = useState(null);
+    const [selectedTag, setSelectedTag] = useState("");
+
+    function handleSelectTag(tag) {
+        setSelectedTag(
+            !tag || tag === "all" ? "" : tag.toLowerCase().replace(" ", "_")
+        );
+    }
 
     useEffect(() => {
-        setIsLoading(true);
         async function fetchRecipes() {
+            setIsLoading(true);
             const options = {
                 method: "GET",
                 url: recipesAPI,
                 params: {
                     from: "0",
                     size: pageSize,
-                    tags: tag || "",
+                    tags: tag ?? selectedTag.replace(" ", "_"),
                 },
                 headers: {
                     "X-RapidAPI-Key": apiKey,
@@ -28,7 +35,8 @@ export function useRecipes(tag) {
 
             try {
                 const response = await axios.request(options);
-                setRecipes(response.data);
+                const data = response.data;
+                setRecipes(data);
             } catch (error) {
                 setError(error);
                 console.log("error loading ", error);
@@ -38,7 +46,7 @@ export function useRecipes(tag) {
         }
 
         fetchRecipes();
-    }, []);
+    }, [selectedTag]);
 
-    return { isLoading, recipes, error };
+    return { isLoading, recipes, error, selectedTag, handleSelectTag };
 }
