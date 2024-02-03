@@ -51,10 +51,12 @@ export const getStyles = (theme) => ({
     bottomRow: {
         flexDirection: "row",
         justifyContent: "space-between",
+        gap: 40,
     },
     authorView: {
         flexDirection: "row",
         alignItems: "center",
+        flex: 1,
         gap: 8,
     },
     authorAvatar: {
