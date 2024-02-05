@@ -7,23 +7,22 @@ import {
     StyleSheet,
     ScrollView,
 } from "react-native";
-import { useNavigation, useTheme } from "@react-navigation/native";
+import { useTheme } from "@react-navigation/native";
 import FullScreenLoading from "../../components/FullScreenLoading";
 import { useRecipeInfo } from "../../hooks/useRecipeInfo";
 import { getStyles } from "./styles";
 
 function RecipeDetail({ route }) {
     const { id } = route.params;
-    const navigation = useNavigation();
     const theme = useTheme();
     const { isLoading, recipe } = useRecipeInfo(id);
 
     if (isLoading || !recipe) return <FullScreenLoading />;
 
     const styles = StyleSheet.create(getStyles(theme));
-    const nutrition = recipe.nutrition;
+    const nutrition = recipe.nutrition || {};
     delete nutrition.updated_at;
-    const nutritionKeys = Object.keys(recipe.nutrition);
+    const nutritionKeys = Object.keys(nutrition);
 
     return (
         <SafeAreaView style={styles.screenContainer}>
@@ -50,7 +49,7 @@ function RecipeDetail({ route }) {
                 </View>
                 <View style={styles.instructionsList}>
                     <Text style={styles.sectionTitle}>Instructions</Text>
-                    {recipe.instructions.map((item, index) => (
+                    {recipe.instructions?.map((item, index) => (
                         <View style={styles.instructionItem} key={index}>
                             <Text style={styles.instructionPosition}>
                                 {item.position}

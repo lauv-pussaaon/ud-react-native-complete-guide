@@ -33,13 +33,11 @@ export function useSearchRecipes() {
                 setRecipes(data);
             } catch (error) {
                 setError(error);
-                console.log("error loading ", error);
             } finally {
                 setIsLoading(false);
             }
         }
-        console.log("search term ", term);
-        if (term.length >= 5) searchRecipes();
+        if (term.length >= 3) searchRecipes();
     }, [term]);
 
     return { isLoading, recipes, setTerm };

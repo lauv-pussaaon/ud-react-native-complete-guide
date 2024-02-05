@@ -28,12 +28,10 @@ export function useRecipeInfo(id) {
                 setRecipe(data);
             } catch (error) {
                 setError(error);
-                console.log("error loading ", error);
             } finally {
                 setIsLoading(false);
             }
         }
-
         fetchRecipe(id);
     }, []);
 

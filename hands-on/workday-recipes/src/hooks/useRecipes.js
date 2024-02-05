@@ -11,9 +11,7 @@ export function useRecipes(tag) {
     const [selectedTag, setSelectedTag] = useState("");
 
     function handleSelectTag(tag) {
-        setSelectedTag(
-            !tag || tag === "all" ? "" : tag.toLowerCase().replace(" ", "_")
-        );
+        setSelectedTag(!tag || tag === "all" ? "" : tag.replace(" ", "_"));
     }
 
     useEffect(() => {
@@ -25,7 +23,7 @@ export function useRecipes(tag) {
                 params: {
                     from: "0",
                     size: pageSize,
-                    tags: tag ?? selectedTag.replace(" ", "_"),
+                    tags: selectedTag || tag,
                 },
                 headers: {
                     "X-RapidAPI-Key": apiKey,
@@ -39,12 +37,10 @@ export function useRecipes(tag) {
                 setRecipes(data);
             } catch (error) {
                 setError(error);
-                console.log("error loading ", error);
             } finally {
                 setIsLoading(false);
             }
         }
-
         fetchRecipes();
     }, [selectedTag]);
 
