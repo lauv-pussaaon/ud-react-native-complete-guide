@@ -4,6 +4,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { UIContextProvider } from "./src/context/UIContext";
 import OnBoarding from "./src/screens/auth/OnBoarding";
 import Signin from "./src/screens/auth/Signin";
+import Signup from "./src/screens/auth/Signup";
 import AppTheme from "./src/constants/AppTheme";
 
 function App() {
@@ -23,6 +24,9 @@ function App() {
                     <Stack.Screen
                         name="Signin"
                         component={Signin}></Stack.Screen>
+                    <Stack.Screen
+                        name="Signup"
+                        component={Signup}></Stack.Screen>
                 </Stack.Navigator>
             </NavigationContainer>
         </UIContextProvider>

@@ -26,7 +26,11 @@ function OnBoarding() {
                     onPress={() => navigation.navigate("Signin")}>
                     Log in
                 </Button>
-                <Button type="primary">Get started</Button>
+                <Button
+                    type="primary"
+                    onPress={() => navigation.navigate("Signup")}>
+                    Get started
+                </Button>
             </View>
         </>
     );
