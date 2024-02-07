@@ -1,14 +1,23 @@
 import React from "react";
-import { SafeAreaView, View, Text, StyleSheet } from "react-native";
+import { SafeAreaView, View, Text } from "react-native";
+import GlobalStyles from "../../../constants/GlobalStyles";
 import TitleBold from "../../../components/TitleBold";
 import Button from "../../../components/Button";
-import GlobalStyles from "../../../constants/GlobalStyles";
 import Input from "../../../components/Input";
 import Link from "../../../components/Link";
+import styles from "./styles";
+import { useUIContext } from "../../../context/UIContext";
 
 function Signin() {
+    const { hasNotch } = useUIContext();
+
     return (
-        <SafeAreaView style={GlobalStyles.screenContainer}>
+        <SafeAreaView
+            style={[
+                hasNotch
+                    ? GlobalStyles.screenContainerWithNotch
+                    : GlobalStyles.screenContainer,
+            ]}>
             <TitleBold>Welcome back!</TitleBold>
             <View style={styles.inputContainer}>
                 <Input
@@ -28,21 +37,3 @@ function Signin() {
 }
 
 export default Signin;
-
-const styles = StyleSheet.create({
-    inputContainer: {
-        marginTop: 36,
-        gap: 24,
-        marginBottom: 48,
-    },
-    footer: {
-        flexDirection: "row",
-        justifyContent: "center",
-        gap: 8,
-        marginTop: 26,
-    },
-    footerText: {
-        fontSize: 16,
-        color: GlobalStyles.colors.grey400,
-    },
-});

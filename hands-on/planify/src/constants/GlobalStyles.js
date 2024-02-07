@@ -18,6 +18,10 @@ const GlobalStyles = {
         marginHorizontal: 24,
         marginTop: 48,
     },
+    screenContainerWithNotch: {
+        marginHorizontal: 24,
+        marginTop: 78,
+    },
 };
 
 export default GlobalStyles;
