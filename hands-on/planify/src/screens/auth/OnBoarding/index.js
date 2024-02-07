@@ -3,8 +3,11 @@ import { Image, View, Text } from "react-native";
 import Button from "../../../components/Button";
 import TitleBold from "../../../components/TitleBold";
 import styles from "./styles";
+import { useNavigation } from "@react-navigation/native";
 
 function OnBoarding() {
+    const navigation = useNavigation();
+
     return (
         <>
             <View style={styles.imageContainer}>
@@ -18,7 +21,11 @@ function OnBoarding() {
                     Get organized by sorting out all your tasks and boost your
                     productivity.
                 </Text>
-                <Button type="secondary">Log in</Button>
+                <Button
+                    type="secondary"
+                    onPress={() => navigation.navigate("Signin")}>
+                    Log in
+                </Button>
                 <Button type="primary">Get started</Button>
             </View>
         </>
