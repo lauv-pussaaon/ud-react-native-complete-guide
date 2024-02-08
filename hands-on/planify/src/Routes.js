@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Image, View, Text } from "react-native";
+import { Image } from "react-native";
 
 import OnBoarding from "./screens/auth/OnBoarding";
 import Signin from "./screens/auth/Signin";
@@ -13,6 +13,7 @@ import { createDrawerNavigator } from "@react-navigation/drawer";
 import { createStackNavigator } from "@react-navigation/stack";
 import GlobalStyles from "./constants/GlobalStyles";
 import "react-native-gesture-handler";
+import DrawerContent from "./components/DrawerContent";
 
 const Tab = createBottomTabNavigator();
 const Drawer = createDrawerNavigator();
@@ -75,7 +76,8 @@ function Routes() {
 
     if (user) {
         return (
-            <Drawer.Navigator>
+            <Drawer.Navigator
+                drawerContent={props => <DrawerContent {...props} />}>
                 <Drawer.Screen name="Tabs" component={Tabs} />
                 <Drawer.Screen name="AddTask" component={AddTask} />
             </Drawer.Navigator>

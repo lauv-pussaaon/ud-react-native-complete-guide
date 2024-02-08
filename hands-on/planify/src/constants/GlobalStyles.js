@@ -6,6 +6,7 @@ const GlobalStyles = {
         grey200: "hsla(202, 6%, 94%, 1)",
         grey400: "hsla(215, 14%, 60%, 1)",
         grey600: "hsla(0, 0%, 44%, 1)",
+        black: "hsla(0, 0%, 0%, 1)",
     },
     weights: {
         extraBold: "900",
