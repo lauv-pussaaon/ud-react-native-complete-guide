@@ -77,6 +77,7 @@ function Routes() {
     if (user) {
         return (
             <Drawer.Navigator
+                screenOptions={{ headerShown: false }}
                 drawerContent={props => <DrawerContent {...props} />}>
                 <Drawer.Screen name="Tabs" component={Tabs} />
                 <Drawer.Screen name="AddTask" component={AddTask} />
