@@ -6,7 +6,6 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         justifyContent: "space-between",
         alignItems: "center",
-        padding: 24,
     },
     title: {
         fontSize: 16,
