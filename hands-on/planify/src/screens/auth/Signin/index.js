@@ -27,7 +27,10 @@ function Signin() {
                 console.log("logined successfully");
             })
             .catch(error => {
-                if (error.code === "auth/wrong-password") {
+                if (
+                    error.code === "auth/wrong-password" ||
+                    error.code === "auth/invalid-credential"
+                ) {
                     Alert.alert("Wrong email or password");
                 } else if (error.code === "auth/invalid-email") {
                     Alert.alert("Invalid email");

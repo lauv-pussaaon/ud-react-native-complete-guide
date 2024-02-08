@@ -24,6 +24,10 @@ const GlobalStyles = {
         marginTop: 78,
         flex: 1,
     },
+    tabIcon: {
+        width: 24,
+        height: 24,
+    },
 };
 
 export default GlobalStyles;

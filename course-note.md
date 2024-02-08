@@ -57,4 +57,9 @@ npm install @react-navigation/stack
 npm install react-native-screens
 npm install react-native-safe-area-context
 npm install react-native-device-info
+npm install @react-native-firebase/app
+npm install @react-native-firebase/auth
+npm install @react-navigation/bottom-tabs
+npm install @react-navigation/drawer
+npm install react-native-reanimated
 ```
