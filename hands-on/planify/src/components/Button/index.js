@@ -2,7 +2,7 @@ import React from "react";
 import { TouchableOpacity, Text } from "react-native";
 import styles from "./styles";
 
-function Button({ children, type = "primary", ...props }) {
+function Button({ children, type = "primary", disabled, ...props }) {
     return (
         <TouchableOpacity
             style={[
@@ -10,8 +10,10 @@ function Button({ children, type = "primary", ...props }) {
                 type === "primary"
                     ? styles.primaryButton
                     : styles.secondaryButton,
+                disabled ? styles.disabled : {},
             ]}
-            {...props}>
+            {...props}
+            disabled={disabled}>
             <Text style={styles.text}>{children}</Text>
         </TouchableOpacity>
     );

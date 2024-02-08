@@ -6,6 +6,7 @@ import styles from "./styles";
 function Input({ ...props }) {
     return (
         <TextInput
+            autoCapitalize="none"
             placeholderTextColor={GlobalStyles.grey600}
             {...props}
             style={styles.input}></TextInput>

@@ -17,10 +17,12 @@ const GlobalStyles = {
     screenContainer: {
         marginHorizontal: 24,
         marginTop: 48,
+        flex: 1,
     },
     screenContainerWithNotch: {
         marginHorizontal: 24,
         marginTop: 78,
+        flex: 1,
     },
 };
 

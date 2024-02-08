@@ -16,6 +16,9 @@ const styles = StyleSheet.create({
     secondaryButton: {
         backgroundColor: GlobalStyles.colors.secondary,
     },
+    disabled: {
+        opacity: 0.4,
+    },
     text: {
         color: "#fff",
         fontWeight: GlobalStyles.weights.bold,
