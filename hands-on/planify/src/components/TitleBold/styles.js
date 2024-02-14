@@ -3,7 +3,7 @@ import GlobalStyles from "../../constants/GlobalStyles";
 
 const styles = StyleSheet.create({
     title: {
-        fontSize: 22,
+        fontSize: 28,
         letterSpacing: 0.5,
         color: GlobalStyles.colors.titleBold,
         fontWeight: GlobalStyles.weights.bold,

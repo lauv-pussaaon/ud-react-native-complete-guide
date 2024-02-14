@@ -15,7 +15,9 @@ function DrawerContent(props) {
     }
 
     return (
-        <DrawerContentScrollView {...props}>
+        <DrawerContentScrollView
+            contentContainerStyle={styles.drawerContent}
+            {...props}>
             <Text
                 style={styles.link}
                 onPress={() => navigation.navigate("Home")}>
@@ -53,8 +55,10 @@ const styles = StyleSheet.create({
     link: {
         color: GlobalStyles.colors.black,
         fontWeight: GlobalStyles.weights.semiBold,
-        fontSize: 13,
-        margin: 8,
-        marginHorizontal: 16,
+        fontSize: 16,
+        marginHorizontal: 32,
+    },
+    drawerContent: {
+        gap: 32,
     },
 });

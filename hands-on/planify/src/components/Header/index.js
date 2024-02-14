@@ -1,21 +1,33 @@
 import React from "react";
 import { View, Text, Image, Pressable } from "react-native";
 import styles from "./styles";
-import GlobalStyles from "../../constants/GlobalStyles";
 import { useNavigation } from "@react-navigation/native";
 
-function Header({ title }) {
+function Header({ title, screenMode = "tab" }) {
     const navigation = useNavigation();
 
     return (
         <View style={styles.container}>
-            <Pressable onPress={() => navigation.openDrawer()} hitSlop={8}>
+            <Pressable
+                onPress={
+                    screenMode === "tab"
+                        ? navigation.openDrawer
+                        : navigation.goBack
+                }
+                hitSlop={8}
+                style={styles.leftButton}>
                 <Image
-                    style={GlobalStyles.tabIcon}
-                    source={require("../../assets/icons/hamburger.png")}
+                    style={styles.buttonIcon}
+                    source={
+                        screenMode === "tab"
+                            ? require("../../assets/icons/hamburger.png")
+                            : require("../../assets/icons/back.png")
+                    }
                 />
             </Pressable>
-            <Text style={styles.title}>{title}</Text>
+            {screenMode === "tab" && (
+                <Text style={styles.headerTitle}>{title}</Text>
+            )}
             <View style={styles.spacer} />
         </View>
     );

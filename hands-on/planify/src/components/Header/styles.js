@@ -7,13 +7,21 @@ const styles = StyleSheet.create({
         justifyContent: "space-between",
         alignItems: "center",
     },
-    title: {
+    headerTitle: {
         fontSize: 16,
         color: GlobalStyles.colors.secondary,
         fontWeight: GlobalStyles.weights.semiBold,
     },
     spacer: {
-        margin: 10,
+        margin: 20,
+    },
+    leftButton: {
+        paddingLeft: 24,
+        marginLeft: -24,
+    },
+    buttonIcon: {
+        width: 32,
+        height: 32,
     },
 });
 

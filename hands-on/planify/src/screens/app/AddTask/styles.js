@@ -2,7 +2,7 @@ import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
     backButton: {
-        padding: 24,
+        paddingHorizontal: 24,
         marginLeft: -24,
     },
     backIcon: {
